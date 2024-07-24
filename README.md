@@ -11,8 +11,7 @@
    ### para los gráficos, se calcula dividiendo el número de columnas entre 2, redondeando hacia arriba con 'ceil'.
    ### c) Luego definimos el gráfico:
    ### f, ax = plt.subplots(nrows = filas, ncols = 2, figsize = (16, filas * 6))
-   ### d) Creamnos una figura y una matriz de ejes (ax) con filas y 2 columnas.
-   ### Con figsize definimos el tamaño de la figura: 16 unidades de ancho y filas * 6 unidades de alto.
+   ### d) Creamnos una figura y una matriz de ejes (ax) con filas y 2 columnas. Con figsize definimos el tamaño de la figura: 16 unidades de ancho y filas * 6 unidades de alto.
    ### e) Tenemos que aplanar los ejes, ya que ax es una matriz bidimensional de ejes. Utilizamos 'ax.flat', que convierte esta matriz en una vista plana (unidimensional) para facilitar la iteración.
 
 
