@@ -45,8 +45,8 @@
 
 ## 5) Análisis para merjorar la eficiencia del transporte
    #### a) Análisis de correlación
-          * Calculamos  y Analizamos la matriz de correlación
-          * Identificamos relaciones significativas entre las variables.
+   ####  * Calculamos  y Analizamos la matriz de correlación
+   ####  * Identificamos relaciones significativas entre las variables.
    #### b) Regresión
           - Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
           - Visualizamos y analizamos los resultados del modelo de regresión
