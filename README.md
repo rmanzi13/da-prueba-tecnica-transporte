@@ -3,7 +3,7 @@
 ## 1) Realizar un Análisis Exploratorio de Datos (EDA)
 ### Antes de comenzar con el EDA, debo de realizar una limpieza inicial de los datos:
 ### a) Eliminación de duplicados para evitar sesgos en el análisis.
-### b) Manejo de valores faltantes, detectarlos. Se pueden tratar eliminando filas/columnnas, rellenar con estadístia media o mediana o utilizar técnicas más avanzadas. En este caso de 
+### b) Manejo de valores faltantes, detectarlos. Se pueden tratar eliminando filas/columnnas, rellenar con estadístia media o mediana o utilizar técnicas más avanzadas. En nuestro caso: 
 ###    'Numero_Pasajeros lo hemos rellenado con la mediana de la columna, y en 'Duracion_Viajes_minutos primero se convirtieron los datos a numéricos y estos se reemplazaron por la mediana.
 ### c) Convesión de tipos de datos, se convirtieron fecha a datetime, Numero_Pasajeros a int, Duracion_Viajes_Minutos a float
 ### d) Filtarmos los tipos de transporte inviables.
@@ -24,6 +24,7 @@
    ### Se plantean dos opciones para la seleccion de columnas categóricas: cat_df = df.select_dtypes('O') (Selecciona todas las columnas del DataFrame df que son de tipo object.)
    ### cat_columns = df.select_dtypes(include=['object', 'category']).columns  cat_df = df[cat_columns]  (Selecciona los nombres de las columnas que son de tipo object o category.) 
    ### Para trabajar con 'cat_def' la función no debe ser modificada, ya que 'cat' es solo el nombre del parámetro.
+   ### Aplicamos la función gráficamente.
 
 ## 3) EDA a Variables Numéricas.
    ### a) La función estadisticos_cont toma como entrada un DataFrame num que contiene columnas numéricas.
@@ -38,15 +39,59 @@
    ### e) Se devuelven las estadísticas return estadisticos
 
 ## 4) Al tener en cuenta el Tipo_Transporte 'Tranvía' y 'Metro', también los Reatrasos_Minutos de 999,había inconsistencia en los datos, ya que esos dos tipos de transporte no existen para el tipo de rutas que 
-   ### aparecen en los datos, así como esos Retrasos que se ven, ya que realicé antes el estudio con esos transportes y los outliers en todos los Tipo_Transporte:
+   ### aparecen en los datos, así como esos Retrasos que se ven. Con este filtrado y teniendo en cuenta los tipos de transporte 'Tren' y 'Autobús'
+   ### Graficamos Boxplot y analizamos outliers en Tipo_Transporte
    ### a) Se filtran los outliers de todas las filas donde Retraso_Minutos es igual a 999.
    ### b) Se cuentan los outliers por Tipo_Transporte, se agrupan los datos filtrados por Tipo_Transporte y se cuenta el número de filas por cada grupo.
    ### c) Se identifican las rutas correspondientes, agrupando los datos filtrados por Tipo_Transporte y Ruta , contando el número de filas en cada combinación de grupo.
+   ### d) Luego filtramos los retrasos anormalmente altos, eliminando los outliers
 
-## 5) Al ver ciertos tipo de inconsistencias, como las rutas imposibles por ciertos tipos de transportes y tantos retrasos anormalmente altos, decidimos validar y limpiar los datos para luego convertir nuevamente la variables categóricas a nunéricas con los posibles Tipo_Transportes, visualizando nuevamente los resultados. 
+## 5) Análisis para merjorar la eficiencia del transporte
+   ### a) Análisis de correlación
+         - Calculamos  y Analizamos la matriz de correlación
+         - Identificamos relaciones significativas entre las variables.
+   ### b) Regresión
+          - Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
+          - Visualizamos y analizamos los resultados del modelo de regresión
+   ### En mi análisis, he obtenido:
+       ====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const              366.1372      4.014     91.223      0.000     358.270     374.004
+Numero_Pasajeros    -0.0252      0.035     -0.717      0.474      -0.094       0.044
+Retraso_Minutos      0.0465      0.026      1.777      0.076      -0.005       0.098
+Tipo_Transporte      2.1003      1.816      1.157      0.247      -1.458       5.659
+Dia_Semana          -1.0486      0.454     -2.311      0.021      -1.938      -0.159
 
+   ### Los valores de p-valor < 0.05 se considera significativo, indicando suficiente evidencia para rechazar la hipótesis nula en caso > 0.05 no se rechaza la hipótesis nula.
+   ### El coeficiente para Retraso_Minutos es 0.0465, con un p-valor de 0.076. Esto sugiere que hay alguna evidencia de que los minutos de retraso tienen un efecto positivo en la duración del viaje, 
+   ### aunque el resultado no alcanza el umbral convencional de significancia estadística (p < 0.05). Por lo tanto, este hallazgo debe interpretarse con precaución y podría beneficiarse 
+   ### de estudios adicionales o un mayor tamaño de muestra.
 
-## 6) Análisis para Mejorar la Eficiencia del Transporte
+   ### En mi análisis: 
+   #### Dia_Semana tiene un p-valor: 0.021
+   #### Rechaza la HO.  El día de la semana tiene un efecto significativo en la duración del viaje.
+
+   #### Variables significativas:
+   #### - Intercepto y Dia_Semana
+
+   #### Variables no significativas
+   #### Numero_Pasajeros, Retraso_Minutos (marginalmente significativo), y Tipo_Transporte no son significativamente diferentes de cero. No tienen un efecto significativo en la duración del viaje.
+
+   ### Podrámos hacer un análsis más exautivo para poder interpretar mejor el Retraso_Minutos obteniendo más datos, otras variables, etc.
+
+   #### R-squared
+   #### En mi modelo R2 es 0.000, o que indica que el modelo no explica prácticamente nada de la variabilidad en la duración del viaje. Esto sugiere que las variables independientes 
+   #### que estás usando no son buenas predictoras de la duración del viaje en tu modelo actual.
+
+   ### Luego he realizado el modelo de regresiób con la extracción de características temporales y con varios análisis he llegado a la conclusión que mis variables significativs son Dia_semana y mes
+   ### o sea que tienen algún impacto en la duraciónn del viaje. He debido no hacer uso de algunas de ellas en el análisis por su elevada multicolinealidad.
+   ### Vemos un bajo R2 indica que hay factores que tal vez sean importantes y no estar capturados en este modelo, como: condiciones climáticas, datos de tráfico, períodos de vacaciones, etc.
+   
+   ### c) Análisis de Rutas
+          - Analizamos el rendimiento de diferentes rutas. Para ello agrupamos los datos por la variable 'Ruta' y calculamos las estadísticas de las variables de interés, usamos gráfficos
+            de barra y gráficos de caja para visualizar los resutlados
+
 
 
 
