@@ -65,9 +65,9 @@ estadisticos['median'] añade una nueva fila al DataFrame estadisticos con la me
    #### Variables no significativas
    #### Numero_Pasajeros, Retraso_Minutos (marginalmente significativo), y Tipo_Transporte no son significativamente diferentes de cero. No tienen un efecto significativo en la duración del viaje.
 
-   ### Podrámos hacer un análsis más exautivo para poder interpretar mejor el Retraso_Minutos obteniendo más datos, otras variables, etc.
+   #### Podrámos hacer un análsis más exautivo para poder interpretar mejor el Retraso_Minutos obteniendo más datos, otras variables, etc.
 
-   #### R-squared
+   ## R-squared
    #### En mi modelo R2 es 0.000, o que indica que el modelo no explica prácticamente nada de la variabilidad en la duración del viaje. Esto sugiere que las variables independientes que estamos usando no son buenas predictoras de la duración del viaje en mi modelo actual.
 
    #### Luego he realizado el modelo de regresiób con la extracción de características temporales y con varios análisis he llegado a la conclusión que mis variables significativs son Dia_semana y mes. Aquí dejo los datos:
