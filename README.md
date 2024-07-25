@@ -32,7 +32,7 @@
    ####    los valores mínimos, los percentiles y los valores máximos) para cada columna en el DataFrame num. 
    ####    .T transpone el resultado para que las estadísticas se presenten como filas y las columnas originales del DataFrame num se presenten como columnas, facilitando la adición de nuevas estadísticas a cada columna.
    #### c) Añadimos la mediana: estadisticos['median'] = num.median(), donde num.median() calcula la mediana para cada columna del DataFrame num.
-   ####    estadisticos['median'] añade una nueva fila al DataFrame estadisticos con la mediana de cada columna.
+estadisticos['median'] añade una nueva fila al DataFrame estadisticos con la mediana de cada columna.
    #### d) Se reordenan las columnas: estadisticos = estadisticos.iloc[:, [0, 1, 8, 2, 3, 4, 5, 6, 7]], haciendo que la mediana esté junto a la media. iloc selecciona todas las filas y reordena las columnas especificada por los índices.
    #### e) Se devuelven las estadísticas return estadisticos
 
@@ -48,21 +48,19 @@
    ####  * Calculamos  y Analizamos la matriz de correlación
    ####  * Identificamos relaciones significativas entre las variables.
    #### b) Regresión
-          - Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
-          - Visualizamos y analizamos los resultados del modelo de regresión
-   ### En mi análisis, he obtenido:
-   <https://drive.google.com/file/d/1mqtj-9CmYvszXahO9yXM93wpuh-u-ZGo/view?usp=drive_link>
-   ### Los valores de p-valor < 0.05 se considera significativo, indicando suficiente evidencia para rechazar la hipótesis nula en caso > 0.05 no se rechaza la hipótesis nula.
-   ### El coeficiente para Retraso_Minutos es 0.0465, con un p-valor de 0.076. Esto sugiere que hay alguna evidencia de que los minutos de retraso tienen un efecto positivo en la duración del viaje, 
-   ### aunque el resultado no alcanza el umbral convencional de significancia estadística (p < 0.05). Por lo tanto, este hallazgo debe interpretarse con precaución y podría beneficiarse 
-   ### de estudios adicionales o un mayor tamaño de muestra.
+   ####  * Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
+   ####  * Visualizamos y analizamos los resultados del modelo de regresión
+   #### En mi análisis, he obtenido:
+   <https://drive.google.com/file/d/1-8sjuYgW6hPPHb88B3qXmOmgf2O5doeK/view?usp=drive_link>
+   #### Los valores de p-valor < 0.05 se considera significativo, indicando suficiente evidencia para rechazar la hipótesis nula en caso > 0.05 no se rechaza la hipótesis nula.
+   #### El coeficiente para Retraso_Minutos es 0.0465, con un p-valor de 0.076. Esto sugiere que hay alguna evidencia de que los minutos de retraso tienen un efecto positivo en la duración del viaje, aunque el resultado no alcanza el umbral convencional de significancia estadística (p < 0.05). Por lo tanto, este hallazgo debe interpretarse con precaución y podría beneficiarse de estudios adicionales o un mayor tamaño de muestra.
 
    ### En mi análisis: 
    #### Dia_Semana tiene un p-valor: 0.021
    #### Rechaza la HO.  El día de la semana tiene un efecto significativo en la duración del viaje.
 
    #### Variables significativas:
-   #### - Intercepto y Dia_Semana
+   #### - Intercepto, Dia_Semana, 
 
    #### Variables no significativas
    #### Numero_Pasajeros, Retraso_Minutos (marginalmente significativo), y Tipo_Transporte no son significativamente diferentes de cero. No tienen un efecto significativo en la duración del viaje.
@@ -70,16 +68,15 @@
    ### Podrámos hacer un análsis más exautivo para poder interpretar mejor el Retraso_Minutos obteniendo más datos, otras variables, etc.
 
    #### R-squared
-   #### En mi modelo R2 es 0.000, o que indica que el modelo no explica prácticamente nada de la variabilidad en la duración del viaje. Esto sugiere que las variables independientes 
-   #### que estás usando no son buenas predictoras de la duración del viaje en tu modelo actual.
+   #### En mi modelo R2 es 0.000, o que indica que el modelo no explica prácticamente nada de la variabilidad en la duración del viaje. Esto sugiere que las variables independientes que estamos usando no son buenas predictoras de la duración del viaje en mi modelo actual.
 
-   ### Luego he realizado el modelo de regresiób con la extracción de características temporales y con varios análisis he llegado a la conclusión que mis variables significativs son Dia_semana y mes
-   ### o sea que tienen algún impacto en la duraciónn del viaje. He debido no hacer uso de algunas de ellas en el análisis por su elevada multicolinealidad.
-   ### Vemos un bajo R2 indica que hay factores que tal vez sean importantes y no estar capturados en este modelo, como: condiciones climáticas, datos de tráfico, períodos de vacaciones, etc.
+   #### Luego he realizado el modelo de regresiób con la extracción de características temporales y con varios análisis he llegado a la conclusión que mis variables significativs son Dia_semana y mes. Aquí dejo los datos:
+   <https://drive.google.com/file/d/1mqtj-9CmYvszXahO9yXM93wpuh-u-ZGo/view?usp=drive_link>
+   #### o sea que tienen algún impacto en la duraciónn del viaje. He debido no hacer uso de algunas de ellas en el análisis por su elevada multicolinealidad.
+   #### Vemos un bajo R2 indica que hay factores que tal vez sean importantes y no estar capturados en este modelo, como: condiciones climáticas, datos de tráfico, períodos de vacaciones, etc.
    
    ### c) Análisis de Rutas
-          - Analizamos el rendimiento de diferentes rutas. Para ello agrupamos los datos por la variable 'Ruta' y calculamos las estadísticas de las variables de interés, usamos gráfficos
-            de barra y gráficos de caja para visualizar los resutlados
+   ####  Analizamos el rendimiento de diferentes rutas. Para ello agrupamos los datos por la variable 'Ruta' y calculamos las estadísticas de las variables de interés, usamos gráfficos de barra y gráficos de caja para visualizar los resutlados.
 
 
 
