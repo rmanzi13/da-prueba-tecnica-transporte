@@ -16,27 +16,25 @@
    #### c) Luego definimos el gráfico:
    #### f, ax = plt.subplots(nrows = filas, ncols = 2, figsize = (16, filas * 6))
    #### d) Creamnos una figura y una matriz de ejes (ax) con filas y 2 columnas. Con figsize definimos el tamaño de la figura: 16 unidades de ancho y filas * 6 unidades de alto.   
-   ### e) Tenemos que aplanar los ejes, ya que ax es una matriz bidimensional de ejes. Utilizamos 'ax.flat', que convierte esta matriz en una vista plana (unidimensional) para facilitar la iteración.
-   ### f) Creamos un bucle para añadir gráficos, iterando sobre cada columna en el DataFrame 'cat', usando enumerate para obtener tanto el índice (index) como el nombre de la columna (variable).
-   ### g) Con la siguiente línea en el bucle: 'cat[variable].value_counts().plot.barh(ax = ax[index])': 'cat[variable].value_counts()' cuenta la frecuencia de cada categoría en la columna variable.
-   ###    .plot.barh(ax = ax[index]) crea un gráfico de barras horizontal de estas frecuencias y lo asigna al eje correspondiente ax[index].
-   ### h) Las últimas dos líneas del bucle, una establece el título del gráfico con el nombre de la columna, con tamaño de fuente y negrita, y la segunda ajusta el tamaño de las etiquetas de los ejes.
-   ### Se plantean dos opciones para la seleccion de columnas categóricas: cat_df = df.select_dtypes('O') (Selecciona todas las columnas del DataFrame df que son de tipo object.)
-   ### cat_columns = df.select_dtypes(include=['object', 'category']).columns  cat_df = df[cat_columns]  (Selecciona los nombres de las columnas que son de tipo object o category.) 
-   ### Para trabajar con 'cat_def' la función no debe ser modificada, ya que 'cat' es solo el nombre del parámetro.
-   ### Aplicamos la función gráficamente.
+   #### e) Tenemos que aplanar los ejes, ya que ax es una matriz bidimensional de ejes. Utilizamos 'ax.flat', que convierte esta matriz en una vista plana (unidimensional) para facilitar la iteración.
+   #### f) Creamos un bucle para añadir gráficos, iterando sobre cada columna en el DataFrame 'cat', usando enumerate para obtener tanto el índice (index) como el nombre de la columna (variable).
+   #### g) Con la siguiente línea en el bucle: 'cat[variable].value_counts().plot.barh(ax = ax[index])': 'cat[variable].value_counts()' cuenta la frecuencia de cada categoría en la columna variable.
+   ####    .plot.barh(ax = ax[index]) crea un gráfico de barras horizontal de estas frecuencias y lo asigna al eje correspondiente ax[index].
+   #### h) Las últimas dos líneas del bucle, una establece el título del gráfico con el nombre de la columna, con tamaño de fuente y negrita, y la segunda ajusta el tamaño de las etiquetas de los ejes.
+   #### Se plantean dos opciones para la seleccion de columnas categóricas: cat_df = df.select_dtypes('O') (Selecciona todas las columnas del DataFrame df que son de tipo object.)
+   #### cat_columns = df.select_dtypes(include=['object', 'category']).columns  cat_df = df[cat_columns]  (Selecciona los nombres de las columnas que son de tipo object o category.) 
+   #### Para trabajar con 'cat_def' la función no debe ser modificada, ya que 'cat' es solo el nombre del parámetro.
+   #### Aplicamos la función gráficamente.
 
 ## 3) EDA a Variables Numéricas.
-   ### a) La función estadisticos_cont toma como entrada un DataFrame num que contiene columnas numéricas.
-   ### b) El cálculo de la estadística descriptiva: estadisticos = num.describe().T, num.describe() calcula estadísticas descriptivas básicas (como la cuenta, la media, la desviación estándar, 
-   ###    los valores mínimos, los percentiles y los valores máximos) para cada columna en el DataFrame num. 
-   ###    .T transpone el resultado para que las estadísticas se presenten como filas y las columnas originales del DataFrame num se presenten como columnas, facilitando la adición de nuevas 
-   ###    estadísticas a cada columna.
-   ### c) Añadimos la mediana: estadisticos['median'] = num.median(), donde num.median() calcula la mediana para cada columna del DataFrame num.
-   ###    estadisticos['median'] añade una nueva fila al DataFrame estadisticos con la mediana de cada columna.
-   ### d) Se reordenan las columnas: estadisticos = estadisticos.iloc[:, [0, 1, 8, 2, 3, 4, 5, 6, 7]], haciendo que la mediana esté junto a la media. iloc selecciona todas las filas y reordena las columnas
-   ###    especificada por los índices.
-   ### e) Se devuelven las estadísticas return estadisticos
+   #### a) La función estadisticos_cont toma como entrada un DataFrame num que contiene columnas numéricas.
+   #### b) El cálculo de la estadística descriptiva: estadisticos = num.describe().T, num.describe() calcula estadísticas descriptivas básicas (como la cuenta, la media, la desviación estándar, 
+   ####    los valores mínimos, los percentiles y los valores máximos) para cada columna en el DataFrame num. 
+   ####    .T transpone el resultado para que las estadísticas se presenten como filas y las columnas originales del DataFrame num se presenten como columnas, facilitando la adición de nuevas estadísticas a cada columna.
+   #### c) Añadimos la mediana: estadisticos['median'] = num.median(), donde num.median() calcula la mediana para cada columna del DataFrame num.
+   ####    estadisticos['median'] añade una nueva fila al DataFrame estadisticos con la mediana de cada columna.
+   #### d) Se reordenan las columnas: estadisticos = estadisticos.iloc[:, [0, 1, 8, 2, 3, 4, 5, 6, 7]], haciendo que la mediana esté junto a la media. iloc selecciona todas las filas y reordena las columnas especificada por los índices.
+   #### e) Se devuelven las estadísticas return estadisticos
 
 ## 4) Al tener en cuenta el Tipo_Transporte 'Tranvía' y 'Metro', también los Reatrasos_Minutos de 999,había inconsistencia en los datos, ya que esos dos tipos de transporte no existen para el tipo de rutas que 
    ### aparecen en los datos, así como esos Retrasos que se ven. Con este filtrado y teniendo en cuenta los tipos de transporte 'Tren' y 'Autobús'
