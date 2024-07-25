@@ -1,12 +1,13 @@
 # da-prueba-tecnica-transporte
 
 ## 1) Realizar un Análisis Exploratorio de Datos (EDA)
-### Antes de comenzar con el EDA, debo de realizar una limpieza inicial de los datos:
-### a) Eliminación de duplicados para evitar sesgos en el análisis.
-### b) Manejo de valores faltantes, detectarlos. Se pueden tratar eliminando filas/columnnas, rellenar con estadístia media o mediana o utilizar técnicas más avanzadas. En nuestro caso: 
-###    'Numero_Pasajeros lo hemos rellenado con la mediana de la columna, y en 'Duracion_Viajes_minutos primero se convirtieron los datos a numéricos y estos se reemplazaron por la mediana.
-### c) Convesión de tipos de datos, se convirtieron fecha a datetime, Numero_Pasajeros a int, Duracion_Viajes_Minutos a float
-### d) Filtarmos los tipos de transporte inviables.
+#### Antes de comenzar con el EDA, debo de realizar una limpieza inicial de los datos:
+#### a) Eliminación de duplicados para evitar sesgos en el análisis.
+#### b) Manejo de valores faltantes, detectarlos. Se pueden tratar eliminando filas/columnnas, rellenar con estadístia media o mediana o utilizar técnicas más 
+####    avanzadas. En nuestro caso: 
+####    'Numero_Pasajeros lo hemos rellenado con la mediana de la columna, y en 'Duracion_Viajes_minutos primero se convirtieron los datos a numéricos y estos se ####    reemplazaron por la mediana.
+#### c) Convesión de tipos de datos, se convirtieron fecha a datetime, Numero_Pasajeros a int, Duracion_Viajes_Minutos a float
+#### d) Filtarmos los tipos de transporte inviables.
 
 ## 2) EDA a Variables Categórias.
    ### a) Creamos una función para que genere gráfico de barras horizontales para cada columna categórica del Dataframe. La función 'graficos_eda_categoricos' toma como entrada un DataFrame 'cat',
