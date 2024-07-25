@@ -12,8 +12,7 @@
 ## 2) EDA a Variables Categórias.
    #### a) Creamos una función para que genere gráfico de barras horizontales para cada columna categórica del Dataframe. La función 'graficos_eda_categoricos' toma como entrada un DataFrame 'cat', que contiene las columnas categóricas que queremos graficar.
    #### b) Importamos la función 'ceil' de la librería 'math' que redondea hacia arriba y cat.shape[1] devuelve el núnero de columnas en el DataFramme 'cat'. 
-   #### Entonces el cálculo de filas necearias
-   #### para los gráficos, se calcula dividiendo el número de columnas entre 2, redondeando hacia arriba con 'ceil'.
+   #### Entonces el cálculo de filas necearias para los gráficos, se calcula dividiendo el número de columnas entre 2, redondeando hacia arriba con 'ceil'.
    #### c) Luego definimos el gráfico:
    #### f, ax = plt.subplots(nrows = filas, ncols = 2, figsize = (16, filas * 6))
    #### d) Creamnos una figura y una matriz de ejes (ax) con filas y 2 columnas. Con figsize definimos el tamaño de la figura: 16 unidades de ancho y filas * 6 unidades de alto.   
