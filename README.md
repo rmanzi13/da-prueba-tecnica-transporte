@@ -54,33 +54,7 @@
           - Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
           - Visualizamos y analizamos los resultados del modelo de regresión
    ### En mi análisis, he obtenido:
-                                OLS Regression Results                              
-##### ==================================================================================
-##### Dep. Variable:     Duracion_Viaje_Minutos   ##### R-squared:                       0.000
-##### Model:                                OLS   ##### Adj. R-squared:                  0.000
-##### Method:                     Least Squares   ##### F-statistic:                     6.681
-Date:                    Thu, 25 Jul 2024   Prob (F-statistic):            0.00126
-Time:                            10:52:13   Log-Likelihood:            -3.3492e+05
-No. Observations:                   49768   AIC:                         6.698e+05
-Df Residuals:                       49765   BIC:                         6.699e+05
-Df Model:                               2                                         
-Covariance Type:                nonrobust                                         
-==============================================================================
-                 coef    std err          t      P>|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-const        364.6425      2.680    136.076      0.000     359.390     369.895
-Dia_Semana    -1.0818      0.454     -2.384      0.017      -1.971      -0.192
-Mes            3.6031      1.271      2.834      0.005       1.112       6.095
-==============================================================================
-Omnibus:                    37853.439   Durbin-Watson:                   1.993
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2902.310
-Skew:                          -0.000   Prob(JB):                         0.00
-Kurtosis:                       1.817   Cond. No.                         12.7
-==============================================================================
-
-Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
+   <https://drive.google.com/file/d/1mqtj-9CmYvszXahO9yXM93wpuh-u-ZGo/view?usp=drive_link>
    ### Los valores de p-valor < 0.05 se considera significativo, indicando suficiente evidencia para rechazar la hipótesis nula en caso > 0.05 no se rechaza la hipótesis nula.
    ### El coeficiente para Retraso_Minutos es 0.0465, con un p-valor de 0.076. Esto sugiere que hay alguna evidencia de que los minutos de retraso tienen un efecto positivo en la duración del viaje, 
    ### aunque el resultado no alcanza el umbral convencional de significancia estadística (p < 0.05). Por lo tanto, este hallazgo debe interpretarse con precaución y podría beneficiarse 
