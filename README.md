@@ -54,14 +54,32 @@
           - Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
           - Visualizamos y analizamos los resultados del modelo de regresión
    ### En mi análisis, he obtenido:
-       ====================================================================================
-                       coef    std err          t      P>|t|      [0.025      0.975]
-------------------------------------------------------------------------------------
-const              366.1372      4.014     91.223      0.000     358.270     374.004
-Numero_Pasajeros    -0.0252      0.035     -0.717      0.474      -0.094       0.044
-Retraso_Minutos      0.0465      0.026      1.777      0.076      -0.005       0.098
-Tipo_Transporte      2.1003      1.816      1.157      0.247      -1.458       5.659
-Dia_Semana          -1.0486      0.454     -2.311      0.021      -1.938      -0.159
+                                OLS Regression Results                              
+==================================================================================
+Dep. Variable:     Duracion_Viaje_Minutos   R-squared:                       0.000
+Model:                                OLS   Adj. R-squared:                  0.000
+Method:                     Least Squares   F-statistic:                     6.681
+Date:                    Thu, 25 Jul 2024   Prob (F-statistic):            0.00126
+Time:                            10:52:13   Log-Likelihood:            -3.3492e+05
+No. Observations:                   49768   AIC:                         6.698e+05
+Df Residuals:                       49765   BIC:                         6.699e+05
+Df Model:                               2                                         
+Covariance Type:                nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const        364.6425      2.680    136.076      0.000     359.390     369.895
+Dia_Semana    -1.0818      0.454     -2.384      0.017      -1.971      -0.192
+Mes            3.6031      1.271      2.834      0.005       1.112       6.095
+==============================================================================
+Omnibus:                    37853.439   Durbin-Watson:                   1.993
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2902.310
+Skew:                          -0.000   Prob(JB):                         0.00
+Kurtosis:                       1.817   Cond. No.                         12.7
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
    ### Los valores de p-valor < 0.05 se considera significativo, indicando suficiente evidencia para rechazar la hipótesis nula en caso > 0.05 no se rechaza la hipótesis nula.
    ### El coeficiente para Retraso_Minutos es 0.0465, con un p-valor de 0.076. Esto sugiere que hay alguna evidencia de que los minutos de retraso tienen un efecto positivo en la duración del viaje, 
