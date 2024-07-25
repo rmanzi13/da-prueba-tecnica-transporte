@@ -36,19 +36,18 @@
    #### d) Se reordenan las columnas: estadisticos = estadisticos.iloc[:, [0, 1, 8, 2, 3, 4, 5, 6, 7]], haciendo que la mediana esté junto a la media. iloc selecciona todas las filas y reordena las columnas especificada por los índices.
    #### e) Se devuelven las estadísticas return estadisticos
 
-## 4) Al tener en cuenta el Tipo_Transporte 'Tranvía' y 'Metro', también los Reatrasos_Minutos de 999,había inconsistencia en los datos, ya que esos dos tipos de transporte no existen para el tipo de rutas que 
-   ### aparecen en los datos, así como esos Retrasos que se ven. Con este filtrado y teniendo en cuenta los tipos de transporte 'Tren' y 'Autobús'
-   ### Graficamos Boxplot y analizamos outliers en Tipo_Transporte
-   ### a) Se filtran los outliers de todas las filas donde Retraso_Minutos es igual a 999.
-   ### b) Se cuentan los outliers por Tipo_Transporte, se agrupan los datos filtrados por Tipo_Transporte y se cuenta el número de filas por cada grupo.
-   ### c) Se identifican las rutas correspondientes, agrupando los datos filtrados por Tipo_Transporte y Ruta , contando el número de filas en cada combinación de grupo.
-   ### d) Luego filtramos los retrasos anormalmente altos, eliminando los outliers
+## 4) Inconsistencia de Datos
+   #### Al tener en cuenta el Tipo_Transporte 'Tranvía' y 'Metro', también los Reatrasos_Minutos de 999,había inconsistencia en los datos, ya que esos dos tipos de transporte no existen para el tipo de rutas que aparecen en los datos, así como esos Retrasos que se ven. Con este filtrado y teniendo en cuenta los tipos de transporte 'Tren' y 'Autobús', graficamos Boxplot y analizamos outliers en Tipo_Transporte
+   #### a) Se filtran los outliers de todas las filas donde Retraso_Minutos es igual a 999.
+   #### b) Se cuentan los outliers por Tipo_Transporte, se agrupan los datos filtrados por Tipo_Transporte y se cuenta el número de filas por cada grupo.
+   #### c) Se identifican las rutas correspondientes, agrupando los datos filtrados por Tipo_Transporte y Ruta , contando el número de filas en cada combinación de grupo.
+   #### d) Luego filtramos los retrasos anormalmente altos, eliminando los outliers
 
 ## 5) Análisis para merjorar la eficiencia del transporte
-   ### a) Análisis de correlación
-         - Calculamos  y Analizamos la matriz de correlación
-         - Identificamos relaciones significativas entre las variables.
-   ### b) Regresión
+   #### a) Análisis de correlación
+          * Calculamos  y Analizamos la matriz de correlación
+          * Identificamos relaciones significativas entre las variables.
+   #### b) Regresión
           - Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
           - Visualizamos y analizamos los resultados del modelo de regresión
    ### En mi análisis, he obtenido:
