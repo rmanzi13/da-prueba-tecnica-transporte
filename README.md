@@ -56,9 +56,9 @@
    ### En mi análisis, he obtenido:
                                 OLS Regression Results                              
 ##### ==================================================================================
-##### Dep. Variable:     Duracion_Viaje_Minutos   R-squared:                       0.000
-##### Model:                                OLS   Adj. R-squared:                  0.000
-##### Method:                     Least Squares   F-statistic:                     6.681
+##### Dep. Variable:     Duracion_Viaje_Minutos   ##### R-squared:                       0.000
+##### Model:                                OLS   ##### Adj. R-squared:                  0.000
+##### Method:                     Least Squares   ##### F-statistic:                     6.681
 Date:                    Thu, 25 Jul 2024   Prob (F-statistic):            0.00126
 Time:                            10:52:13   Log-Likelihood:            -3.3492e+05
 No. Observations:                   49768   AIC:                         6.698e+05
