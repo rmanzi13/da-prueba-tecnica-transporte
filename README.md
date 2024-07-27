@@ -59,9 +59,11 @@
    
    ### c) Análisis de Rutas
    ####  Analizamos el rendimiento de diferentes rutas. Para ello agrupamos los datos por la variable 'Ruta' y calculamos las estadísticas de las variables de interés, usamos gráfficos de barra y gráficos de caja para visualizar los resutlados.
+[Gráficos](https://colab.research.google.com/drive/1TOkospjxZfEpClZLN3qY2-kR9QcC_575?authuser=1#scrollTo=TlBp6wNBiZo7)
 
-
-
+## 7) Diseño de Base de Datos en SQL e Inserción de Datos usando Python
+   #### Para ello he obtenido el archivo luego de la limpieza del archivo original, usando la columna fechan con todos los datos de fecha y tiempo, ya que es más simple de mantener y almacernar  utiliza menos espacio de almacenamiento. De esta manera se mantiene la simplicidad e integridad de los datos, y siempre se pueden crear índices y utilizar funciones de fecha y tiempo para extraer datos específicos en mis consultas.
+   [Datos para BD](https://colab.research.google.com/drive/14JiNQ2BVn5h2Sg6JZTE-cqsmWjOmGVBd?authuser=1#scrollTo=WdW17AfKMDd8)
 
 
 
