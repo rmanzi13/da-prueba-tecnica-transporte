@@ -65,7 +65,14 @@
    #### Para ello he obtenido el archivo luego de la limpieza del archivo original, usando la columna fechan con todos los datos de fecha y tiempo, ya que es más simple de mantener y almacernar  utiliza menos espacio de almacenamiento. De esta manera se mantiene la simplicidad e integridad de los datos, y siempre se pueden crear índices y utilizar funciones de fecha y tiempo para extraer datos específicos en mis consultas.
    [Datos para BD](https://colab.research.google.com/drive/14JiNQ2BVn5h2Sg6JZTE-cqsmWjOmGVBd?authuser=1#scrollTo=WdW17AfKMDd8)
 
+   #### a) Cargamos el DataFramme con los datos finales
+   #### b) Creamos la base de datos y la conectamos a una base de datos SQLite llamada transporte_publico.db
+   #### c) Creamos la tabla 'transporte_publico' con las columnas necesarias
+   #### d) Preparamos los datos para la inserción: seleccionamos las columnas que queremos insertar y las convertimos a una lista de listas
+   #### e) Insertamos los datos utilizando 'executemany' para insertar todos los datos en la tabla.
+   #### f) Confirmamos los datos con commit y cerramos la conexión.
 
+[BD_SQL Python](https://colab.research.google.com/drive/1FSNOvE9MI3jAo-IGsCld_rZhc0wLrjId?authuser=1#scrollTo=OkAYzPJsJZC-)
 
 
 
