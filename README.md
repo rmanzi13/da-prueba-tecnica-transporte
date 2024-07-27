@@ -24,7 +24,7 @@
    #### c) Se identifican las rutas correspondientes, agrupando los datos filtrados por Tipo_Transporte y Ruta , contando el número de filas en cada combinación de grupo.
    #### d) Luego filtramos los retrasos anormalmente altos, eliminando los outliers
 
-## 5) Análisis para merjorar la eficiencia del transporte
+## 5) Análisis para merjorar la eficiencia del transporte primario
    #### a) Análisis de correlación
    ####  * Calculamos  y Analizamos la matriz de correlación
    ####  * Identificamos relaciones significativas entre las variables.
@@ -32,7 +32,7 @@
    ####  * Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
    ####  * Visualizamos y analizamos los resultados del modelo de regresión
    #### En mi análisis, he obtenido:
-   <https://drive.google.com/file/d/1-8sjuYgW6hPPHb88B3qXmOmgf2O5doeK/view?usp=drive_link>
+   [Reegresión Primario] (https://drive.google.com/file/d/1-8sjuYgW6hPPHb88B3qXmOmgf2O5doeK/view?usp=drive_link)
    #### Los valores de p-valor < 0.05 se considera significativo, indicando suficiente evidencia para rechazar la hipótesis nula en caso > 0.05 no se rechaza la hipótesis nula.
    #### El coeficiente para Retraso_Minutos es 0.0465, con un p-valor de 0.076. Esto sugiere que hay alguna evidencia de que los minutos de retraso tienen un efecto positivo en la duración del viaje, aunque el resultado no alcanza el umbral convencional de significancia estadística (p < 0.05). Por lo tanto, este hallazgo debe interpretarse con precaución y podría beneficiarse de estudios adicionales o un mayor tamaño de muestra.
 
@@ -50,7 +50,8 @@
 
    ## R-squared
    #### En mi modelo R2 es 0.000, o que indica que el modelo no explica prácticamente nada de la variabilidad en la duración del viaje. Esto sugiere que las variables independientes que estamos usando no son buenas predictoras de la duración del viaje en mi modelo actual.
-
+   
+## 6) Análisis para mejorar la eficiencia del transporte teniendo en cuenta la extracción de características temporales
    #### Luego he realizado el modelo de regresión con la extracción de características temporales y con varios análisis he llegado a la conclusión que mis variables significativs son Dia_semana y mes. Aquí dejo los datos:
    <https://drive.google.com/file/d/1mqtj-9CmYvszXahO9yXM93wpuh-u-ZGo/view?usp=drive_link>
    #### o sea que tienen algún impacto en la duraciónn del viaje. He debido no hacer uso de algunas de ellas en el análisis por su elevada multicolinealidad.
