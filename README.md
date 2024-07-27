@@ -53,7 +53,7 @@
    
 ## 6) Análisis para mejorar la eficiencia del transporte teniendo en cuenta la extracción de características temporales
    #### Luego he realizado el modelo de regresión con la extracción de características temporales y con varios análisis he llegado a la conclusión que mis variables significativs son Dia_semana y mes. Aquí dejo los datos:
-   <https://drive.google.com/file/d/1mqtj-9CmYvszXahO9yXM93wpuh-u-ZGo/view?usp=drive_link>
+   [Regresión con Extracción características termporales](https://drive.google.com/file/d/1mqtj-9CmYvszXahO9yXM93wpuh-u-ZGo/view?usp=drive_link)
    #### o sea que tienen algún impacto en la duraciónn del viaje. He debido no hacer uso de algunas de ellas en el análisis por su elevada multicolinealidad.
    #### Vemos un bajo R2 indica que hay factores que tal vez sean importantes y no estar capturados en este modelo, como: condiciones climáticas, datos de tráfico, períodos de vacaciones, etc.
    
