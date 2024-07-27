@@ -32,7 +32,7 @@
    ####  * Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
    ####  * Visualizamos y analizamos los resultados del modelo de regresión
    #### En mi análisis, he obtenido:
-   [Reegresión Primario]: https://drive.google.com/file/d/1-8sjuYgW6hPPHb88B3qXmOmgf2O5doeK/view?usp=drive_link
+   [Reegresión Primario] (https://drive.google.com/file/d/1-8sjuYgW6hPPHb88B3qXmOmgf2O5doeK/view?usp=drive_link).
    #### Los valores de p-valor < 0.05 se considera significativo, indicando suficiente evidencia para rechazar la hipótesis nula en caso > 0.05 no se rechaza la hipótesis nula.
    #### El coeficiente para Retraso_Minutos es 0.0465, con un p-valor de 0.076. Esto sugiere que hay alguna evidencia de que los minutos de retraso tienen un efecto positivo en la duración del viaje, aunque el resultado no alcanza el umbral convencional de significancia estadística (p < 0.05). Por lo tanto, este hallazgo debe interpretarse con precaución y podría beneficiarse de estudios adicionales o un mayor tamaño de muestra.
 
