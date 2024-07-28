@@ -74,5 +74,27 @@
 
 [BD_SQL Python](https://colab.research.google.com/drive/1FSNOvE9MI3jAo-IGsCld_rZhc0wLrjId?authuser=1#scrollTo=OkAYzPJsJZC-)
 
-## Creación del Dashboard con Power BI que incluya las principales conclusiones de mi análisis. 
+## 8) Creación del Dashboard con Power BI que incluya las principales conclusiones de mi análisis. 
+   #### Hemos realizado un análisis con diferentes gráficos para poder visualizar el promedio de la Duración del viaje en minutos por Rutas, así como el promedio del Retraso por Tipo de Transporte. Tambien se crearon dos visualizaciones para poder ver la duración y el retraso a lo largo del tiempo.
+   #### Se utilizaron diferentes slicer para poder filtrar los datos por diferentes dimensiones como: Dia Semana, Mes, Ruta, Tipo Transporte.
+   #### Se incluyeron tarjetas de resumen, que muestran KPIs importantes como: promedio de duración del viaje, promedio de retraso y número total de viajes.
+   #### Para los dos primeros KPIs he utilizado la tarjeta, ya que mostraré un valor único en este caso. Si tuviera más información podría utilizar visualziación KPI para mostrar la tendencia de este valor a lo largo del tiempo y compararlo con un objetivo (target). Con los datos que tengo, son solo 3 meses por eso he decidido utilizar la tarjeta con un valor único.
+   #### Para las visualizaciones KPI podría crear medidas, siendo mi objetivo un valor fijo, por ejemplo para la duración del viaje, poddría ser 200 minutos, esta medida sería: 'Objetivo_Duracion_Viaje = 200'
+   #### También podríamos crer una medida de objetivos variables, que mi objeetivo para la duración varíe según diferentes rutas, siendo una medida más compleja.
+   #### Para crear el KPI del número total de viajes, al no tener una columna específica, creamos una medida que cuente el número de registros en mi tabla, ya que cada registro es un viaje. En marzo vemos menos viajes ya que solo tenemos datos hasta el 11 de marzo.
+   
 
+## 9) Conclusiones del Dashboard.
+   #### Debemos tener en cuenta la poca cantidad de datos que tenemos, por lo tanto estos resultados pueden estar sesgados.
+   #### La larga duración de los viajes, podría estar relacionada con la duración de las rutas, frecuencia de paradas, las condiciones del tráfico y la ruta.
+   #### El retraso parece elevado, sugiriendo problmas de puntualidad en los viajes y posibles interrupciones en la ruta. 
+   #### Debemos tener en cuenta que no tenemos muchos datos, y que estos patrones pueden cambiar con datos adicionales.
+
+[Dashboard](https://drive.google.com/file/d/1yZHe-MNH-Iis8-YXSnP55OL5nwqjM0r1/view?usp=drive_link)
+      
+
+   
+
+
+
+   
