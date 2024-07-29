@@ -33,33 +33,21 @@
    ####  * Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
    ####  * Visualizamos y analizamos los resultados del modelo de regresión
    #### En mi análisis, he obtenido:
-   [Reegresión Primario]([https://drive.google.com/file/d/1-8sjuYgW6hPPHb88B3qXmOmgf2O5doeK/view?usp=drive_link](https://drive.google.com/file/d/1IZ8ELI-nskO3oTl-T67eMEUyrKcn47SO/view?usp=drive_link)).
+   [Reegresión Primario](https://drive.google.com/file/d/1IZ8ELI-nskO3oTl-T67eMEUyrKcn47SO/view?usp=drive_link).
    #### Los valores de p-valor < 0.05 se considera significativo, indicando suficiente evidencia para rechazar la hipótesis nula en caso > 0.05 no se rechaza la hipótesis nula.
- 
-   ### En mi análisis: 
-   #### Dia_Semana tiene un p-valor: 0.021
-   #### Rechaza la HO.  El día de la semana tiene un efecto significativo en la duración del viaje.
+   #### R2 y R2 ajustado indican que el modelo no explica la variabilidad en la duración del viaje. Además, la prueba F sugiere que las variables independientes no son predictivas de la duración del viaje.
+   #### Podríamos hacer un análsis más exautivo para poder interpretar mejor el Retraso_Minutos obteniendo más datos, otras variables, etc.
 
-   #### Variables significativas:
-   #### - Intercepto, Dia_Semana, 
-
-   #### Variables no significativas
-   #### Numero_Pasajeros, Retraso_Minutos (marginalmente significativo), y Tipo_Transporte no son significativamente diferentes de cero. No tienen un efecto significativo en la duración del viaje.
-
-   #### Podrámos hacer un análsis más exautivo para poder interpretar mejor el Retraso_Minutos obteniendo más datos, otras variables, etc.
-
-   ## R-squared
-   #### En mi modelo R2 es 0.000, o que indica que el modelo no explica prácticamente nada de la variabilidad en la duración del viaje. Esto sugiere que las variables independientes que estamos usando no son buenas predictoras de la duración del viaje en mi modelo actual.
-   
 ## 6) Análisis para mejorar la eficiencia del transporte teniendo en cuenta la extracción de características temporales
-   #### Luego he realizado el modelo de regresión con la extracción de características temporales y con varios análisis he llegado a la conclusión que mis variables significativs son Dia_semana y mes. Aquí dejo los datos:
-   [Regresión con Extracción características termporales](https://drive.google.com/file/d/1mqtj-9CmYvszXahO9yXM93wpuh-u-ZGo/view?usp=drive_link)
-   #### o sea que tienen algún impacto en la duraciónn del viaje. He debido no hacer uso de algunas de ellas en el análisis por su elevada multicolinealidad.
-   #### Vemos un bajo R2 indica que hay factores que tal vez sean importantes y no estar capturados en este modelo, como: condiciones climáticas, datos de tráfico, períodos de vacaciones, etc.
+   #### Luego he realizado el modelo de regresión con la extracción de características temporales y con varios análisis he llegado a la conclusión que el modelo no es significativo, igual que el análisis anteriior, y que ninguno de los coeficientes de las variables independientes es estadísticamente significativo no tienen un impacto claro en Duración del Viaje.
+   [Regresión con Extracción características termporales](https://drive.google.com/file/d/1bFdelJgwQBfd0gPKyeRURN-_WFC-BQ9d/view?usp=drive_link)
+   #### Podría haber factores que tal vez sean importantes y no estar capturados en este modelo, como: condiciones climáticas, datos de tráfico, períodos de vacaciones, etc.
+
+   #### He probado utilizando Retraso_Minutos como variable independiente y no muestra cambios significativos.
    
    ### c) Análisis de Rutas
    ####  Analizamos el rendimiento de diferentes rutas. Para ello agrupamos los datos por la variable 'Ruta' y calculamos las estadísticas de las variables de interés, usamos gráfficos de barra y gráficos de caja para visualizar los resutlados.
-[Gráficos](https://colab.research.google.com/drive/1TOkospjxZfEpClZLN3qY2-kR9QcC_575?authuser=1#scrollTo=TlBp6wNBiZo7)
+[Gráficos](https://drive.google.com/file/d/1xIYOUAmTuRzWfQWU7MO0KEC94SxfUH3p/view?usp=drive_link)
 
 ## 7) Diseño de Base de Datos en SQL e Inserción de Datos usando Python
    #### Para ello he obtenido el archivo luego de la limpieza del archivo original, usando la columna fechan con todos los datos de fecha y tiempo, ya que es más simple de mantener y almacernar  utiliza menos espacio de almacenamiento. De esta manera se mantiene la simplicidad e integridad de los datos, y siempre se pueden crear índices y utilizar funciones de fecha y tiempo para extraer datos específicos en mis consultas.
