@@ -49,10 +49,7 @@
    ####  Analizamos el rendimiento de diferentes rutas. Para ello agrupamos los datos por la variable 'Ruta' y calculamos las estadísticas de las variables de interés, usamos gráfficos de barra y gráficos de caja para visualizar los resutlados.
 [Gráficos](https://drive.google.com/file/d/1xIYOUAmTuRzWfQWU7MO0KEC94SxfUH3p/view?usp=drive_link)
 
-## 7) Diseño de Base de Datos en SQL e Inserción de Datos usando Python
-   #### Para ello he obtenido el archivo luego de la limpieza del archivo original, usando la columna fechan con todos los datos de fecha y tiempo, ya que es más simple de mantener y almacernar  utiliza menos espacio de almacenamiento. De esta manera se mantiene la simplicidad e integridad de los datos, y siempre se pueden crear índices y utilizar funciones de fecha y tiempo para extraer datos específicos en mis consultas.
-   [Datos para BD](https://colab.research.google.com/drive/14JiNQ2BVn5h2Sg6JZTE-cqsmWjOmGVBd?authuser=1#scrollTo=WdW17AfKMDd8)
-
+## 7) Creación Base de Datos
    #### a) Cargamos el DataFramme con los datos finales
    #### b) Creamos la base de datos y la conectamos a una base de datos SQLite llamada transporte_publico.db
    #### c) Creamos la tabla 'transporte_publico' con las columnas necesarias
@@ -60,7 +57,7 @@
    #### e) Insertamos los datos utilizando 'executemany' para insertar todos los datos en la tabla.
    #### f) Confirmamos los datos con commit y cerramos la conexión.
 
-[BD_SQL Python](https://colab.research.google.com/drive/1FSNOvE9MI3jAo-IGsCld_rZhc0wLrjId?authuser=1#scrollTo=OkAYzPJsJZC-)
+[BD_Python_SQL](https://colab.research.google.com/drive/1FSNOvE9MI3jAo-IGsCld_rZhc0wLrjId?authuser=1#scrollTo=OkAYzPJsJZC-)
 
 ## 8) Creación del Dashboard con Power BI que incluya las principales conclusiones de mi análisis. 
    #### Hemos realizado un análisis con diferentes gráficos para poder visualizar el promedio de la Duración del viaje en minutos por Rutas, así como el promedio del Retraso por Tipo de Transporte. Tambien se crearon dos visualizaciones para poder ver la duración y el retraso a lo largo del tiempo.
