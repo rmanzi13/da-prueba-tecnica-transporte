@@ -1,0 +1,27 @@
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     Duracion_Viaje_Minutos   R-squared:                       0.000
+Model:                                OLS   Adj. R-squared:                  0.000
+Method:                     Least Squares   F-statistic:                     1.296
+Date:                    Sun, 28 Jul 2024   Prob (F-statistic):              0.274
+Time:                            16:41:00   Log-Likelihood:                -79467.
+No. Observations:                   12086   AIC:                         1.589e+05
+Df Residuals:                       12082   BIC:                         1.590e+05
+Df Model:                               3                                         
+Covariance Type:                nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const              424.2151      5.735     73.972      0.000     412.974     435.456
+Dia_Semana          -0.2183      0.790     -0.276      0.782      -1.767       1.331
+Mes                  1.5038      2.215      0.679      0.497      -2.837       5.845
+Numero_Pasajeros    -0.1120      0.061     -1.829      0.067      -0.232       0.008
+==============================================================================
+Omnibus:                    10191.906   Durbin-Watson:                   2.003
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              720.642
+Skew:                           0.005   Prob(JB):                    3.27e-157
+Kurtosis:                       1.804   Cond. No.                         226.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
