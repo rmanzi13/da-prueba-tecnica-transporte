@@ -7,7 +7,8 @@
 
 ####    'Numero_Pasajeros lo hemos rellenado con la mediana de la columna, y en 'Duracion_Viajes_minutos primero se convirtieron los datos a numéricos y estos se reemplazaron por la mediana.
 #### c) Convesión de tipos de datos, se convirtieron fecha a datetime, Numero_Pasajeros a int, Duracion_Viajes_Minutos a float
-#### d) Filtarmos los tipos de transporte inviables.
+#### d) Coincidencia de Regiones. Definimos la ciudades, creamos la función para verificar coincidencia. la aplicamos para filtrar los datos.
+#### e) Filtarmos los tipos de transporte inviables.
 
 ## 2) EDA a Variables Categórias.
    #### a) Creamos una función para que genere gráfico de barras horizontales para cada columna categórica del Dataframe. La función 'graficos_eda_categoricos' toma como entrada un DataFrame 'cat', que contiene las columnas categóricas que queremos graficar.  (Explicación de la misma en el jupiter notebook)
@@ -32,10 +33,9 @@
    ####  * Ajustamos un modelo de regresión para ajustar factores que influyen en la duración del viaje y el retraso.
    ####  * Visualizamos y analizamos los resultados del modelo de regresión
    #### En mi análisis, he obtenido:
-   [Reegresión Primario](https://drive.google.com/file/d/1-8sjuYgW6hPPHb88B3qXmOmgf2O5doeK/view?usp=drive_link).
+   [Reegresión Primario]([https://drive.google.com/file/d/1-8sjuYgW6hPPHb88B3qXmOmgf2O5doeK/view?usp=drive_link](https://drive.google.com/file/d/1IZ8ELI-nskO3oTl-T67eMEUyrKcn47SO/view?usp=drive_link)).
    #### Los valores de p-valor < 0.05 se considera significativo, indicando suficiente evidencia para rechazar la hipótesis nula en caso > 0.05 no se rechaza la hipótesis nula.
-   #### El coeficiente para Retraso_Minutos es 0.0465, con un p-valor de 0.076. Esto sugiere que hay alguna evidencia de que los minutos de retraso tienen un efecto positivo en la duración del viaje, aunque el resultado no alcanza el umbral convencional de significancia estadística (p < 0.05). Por lo tanto, este hallazgo debe interpretarse con precaución y podría beneficiarse de estudios adicionales o un mayor tamaño de muestra.
-
+ 
    ### En mi análisis: 
    #### Dia_Semana tiene un p-valor: 0.021
    #### Rechaza la HO.  El día de la semana tiene un efecto significativo en la duración del viaje.
