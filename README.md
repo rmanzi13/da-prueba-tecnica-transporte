@@ -47,7 +47,7 @@
    
    ### c) Análisis de Rutas
    ####  Analizamos el rendimiento de diferentes rutas. Para ello agrupamos los datos por la variable 'Ruta' y calculamos las estadísticas de las variables de interés, usamos gráfficos de barra y gráficos de caja para visualizar los resutlados.
-[Gráficos](https://drive.google.com/file/d/1xIYOUAmTuRzWfQWU7MO0KEC94SxfUH3p/view?usp=drive_link)
+[Gráficos](https://colab.research.google.com/drive/1tJFdJccrAydKX48Y0pc1dnjoabW_IrLH?authuser=1#scrollTo=d3Zs01NxWJI5)
 
 ## 7) Creación Base de Datos
    #### a) Cargamos el DataFramme con los datos finales
@@ -57,7 +57,7 @@
    #### e) Insertamos los datos utilizando 'executemany' para insertar todos los datos en la tabla.
    #### f) Confirmamos los datos con commit y cerramos la conexión.
 
-[BD_Python_SQL](https://colab.research.google.com/drive/1FSNOvE9MI3jAo-IGsCld_rZhc0wLrjId?authuser=1#scrollTo=OkAYzPJsJZC-)
+[BD_Python_SQL](https://colab.research.google.com/drive/1_gTev18pvVn_LSx4nHNSlQwyNlOTOkX1?authuser=1)
 
 ## 8) Creación del Dashboard con Power BI que incluya las principales conclusiones de mi análisis. 
    #### Hemos realizado un análisis con diferentes gráficos para poder visualizar el promedio de la Duración del viaje en minutos por Rutas, así como el promedio del Retraso por Tipo de Transporte. Tambien se crearon dos visualizaciones para poder ver la duración y el retraso a lo largo del tiempo.
